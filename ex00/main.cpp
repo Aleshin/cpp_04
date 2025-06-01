@@ -13,18 +13,18 @@ int main (void) {
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     std::cout << r->getType() << " " << std::endl;
+    meta->makeSound();
     i->makeSound(); //will output the cat sound!
     j->makeSound();
     std::cout << "---------------" << std::endl;
     std::cout << "WrongCat try to make sound:" << std::endl;
     r->makeSound();
     std::cout << "---------------" << std::endl;
-    meta->makeSound();
 
-    delete meta;
+    delete r;
     delete j;
     delete i;
-    delete r;
+    delete meta;
 
     return 0;
 }

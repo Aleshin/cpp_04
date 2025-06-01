@@ -3,25 +3,25 @@
 
 WrongCat::WrongCat() {
     this->type = "WrongCat";
-    std::cout << "[WrongCat] Constructor called\n";
+    std::cout << getType() << "\'s constructor called\n";
 }
 
 WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other) {
-    std::cout << "[WrongCat] Copy constructor called\n";
+    std::cout << getType() << "\'s copy constructor called\n";
     *this = other;
 }
 
 WrongCat& WrongCat::operator=(const WrongCat& other) {
-    std::cout << "[WrongCat] Copy assignment operator called\n";
+    std::cout << getType() << "\'s copy assignment operator called\n";
     if (this != &other)
         this->type = other.type;
     return *this;
 }
 
 WrongCat::~WrongCat() {
-    std::cout << "[WrongCat] Destructor called\n";
+    std::cout << getType() << "\'s destructor called\n";
 }
 
 void WrongCat::makeSound() const {
-    std::cout << "[WrongCat] Meow meow!\n";
+    std::cout << getType() << " meow meow!\n";
 }
